@@ -1,0 +1,97 @@
+:root {
+	--primary:#F44336;
+}
+
+body {
+	background:url("./wp.svg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	font-family:roboto;
+}
+
+.card {
+	position:absolute;
+	width:768px;
+	height:512px;
+	background:#fff;
+	border-radius:2px;
+	top:calc(50% - 256px);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	left:calc(50% - 384px);
+}
+
+.enum {
+	font-size:2rem;
+	position:relative;
+	margin:4rem;
+}
+
+@media (min-width:768px){
+	.card {
+		border-top:8px solid var(--primary);
+	}
+}
+
+@media only screen and (max-width:768px){
+	.card {
+		width:100%;
+		height:100%;
+		top:0px;
+		left:0px;
+		border-radius:0px;
+	}
+}
+
+hr {
+	border:0px;
+	border-top:1px solid #d1d1d1;
+}
+
+p {
+	font-size:2rem;
+	margin:4rem;
+}
+
+center {
+	position:absolute;
+	bottom:78px;
+	left:0px;
+	right:0px;
+	font-size:24px;
+	user-select:none;
+}
+
+center a i {
+	cursor:pointer;
+}
+
+center a i:after {
+	content:"";
+	position:absolute;
+	width:4px;
+	height:4px;
+	background:var(--primary);
+	opacity:0.4;
+	border-radius:50%;
+	margin-left:-14px;
+	margin-top:10px;
+	animation:bubble 1500ms ease-out infinite;
+}
+
+a {
+	color:var(--primary)!important;
+}
+
+@keyframes bubble {
+	0% {
+		transform:scale(1);
+		opacity:0.4;
+	}
+	
+	100% {
+		transform:scale(50);
+		opacity:0;
+	}
+}
+
